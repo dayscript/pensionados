@@ -644,7 +644,7 @@ head:first-child+body a.textsize_normal:visited {
 	background:#00B1C9;
 }
 .title_ahorro{
-	background:#E1DB91;
+	background:#004677;
 }
 .title_servicios{
 	background:#9DB73D;
@@ -669,7 +669,7 @@ head:first-child+body a.textsize_normal:visited {
 	background:#00B1C9;
 }
 .section-ahorro .block_submenu {
-	background:#E1DB91;
+	background:#004677;
 }
 .section-servicios .block_submenu {
 	background:#9DB73D;
@@ -692,7 +692,7 @@ head:first-child+body a.textsize_normal:visited {
 	border-bottom: 4px solid #00B1C9;
 }
 .section-ahorro #main-content #page-title{
-	border-bottom: 4px solid #E1DB91;
+	border-bottom: 4px solid #004677;
 }
 .section-servicios #main-content #page-title{
 	border-bottom: 4px solid #9DB73D;
