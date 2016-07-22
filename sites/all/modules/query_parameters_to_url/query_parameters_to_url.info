@@ -1,0 +1,10 @@
+name = Query Parameters To URL
+description = Rewrites URL query parameters into Clean URL components on specified paths.
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2014-12-30
+version = "7.x-1.0"
+core = "7.x"
+project = "query_parameters_to_url"
+datestamp = "1419979983"
+
