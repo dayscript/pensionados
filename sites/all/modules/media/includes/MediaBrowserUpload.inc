@@ -15,7 +15,6 @@ class MediaBrowserUpload extends MediaBrowserPlugin {
    * Implements MediaBrowserPluginInterface::access().
    */
   public function access($account = NULL) {
-    
     return file_entity_access('create', NULL, $account);
   }
 
