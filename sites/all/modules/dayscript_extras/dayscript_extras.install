@@ -1,0 +1,111 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the econom_indicator module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup dayscript_extras
+ */
+
+function dayscript_extras_install() {
+	// Crea mi tabla
+	drupal_install_schema('dayscript_extras');
+}
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup dayscript_extras
+ */
+
+function dayscript_extras_uninstall() {
+	//variable_del('block_example_string');
+	//drupal_uninstall_schema('dayscript_extras');
+}
+/**
+ * Implements hook_enable().
+ *
+ * @ingroup dayscript extras
+ */
+function dayscript_extras_disable() {
+  //Check if table exists, if not install the schema.
+  if(db_table_exists('auto_update') == TRUE) {
+    drupal_uninstall_schema('dayscript_extras');
+  }
+}
+
+/**
+ * Implements hook_enable().
+ *
+ * @ingroup dayscript extras
+ */
+function dayscript_extras_enable() {
+  //Check if table exists, if not install the schema.
+  if(db_table_exists('auto_update') == FALSE) {
+    drupal_install_schema('dayscript_extras');
+  }
+}
+/**
+ * Implements hook_schema().
+ *
+ * @ingroup dayscript extras
+ */ 
+
+function dayscript_extras_schema() {
+
+	$schema['auto_update'] = array(
+		'description' => 'Tabla de configuraciones de las cargas automáticas de contenidos. (cada registro es un contenido automático que será creado)',
+		'fields' => array(
+			 'aaid'=> array(
+				 'type' => 'serial',
+				 'description' => 'Unique id for this element',
+				 'unsigned' => TRUE,
+				 'not null' => TRUE
+			 ),
+
+			 'date_format'	=> array(
+				 'type' => 'varchar',
+				 'description' => 'Format date that is must in the file name',
+				 'length' => 20,
+				 'not null' => TRUE,
+			    'default' => ''
+			 ),
+
+			 'file_name'=> array(
+				 'type' => 'varchar',
+				 'description' => 'Must be on begin of file name',
+				 'length' => 32,
+				 'not null' => TRUE,
+			 'default' => ''
+			 ),
+
+			 'file_type'=> array(
+				 'type' => 'varchar',
+				 'description' => 'File type is one of two posible vals, html or file',
+				 'length' => 12,
+			    'not null' => TRUE,
+			 'default' => ''
+			),
+
+			 'active'=> array(
+				 'type' => 'varchar',
+				 'description' => 'If the item is(1) or not(0) enabled',
+				 'length' => 1,
+				 'not null' => TRUE,
+			 'default' => '1'
+			 ),
+
+			 'options'=> array(
+				 'type' => 'varchar',
+				 'description' => 'The location of the file container',
+				 'length' => 255,
+				 'not null' => TRUE,
+			 'default' => ''
+			 ),
+		),
+	   'primary key' => array('aaid'),
+	);
+	return $schema;
+}
