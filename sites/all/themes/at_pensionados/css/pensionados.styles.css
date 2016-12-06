@@ -357,14 +357,12 @@ head:first-child+body a.textsize_normal:visited {
 }
 .slide_home .textos_slide {
 	color: #fff;
-	/*width: 590px;*/
-	margin-left: 14px;
+	width: 58%;
 	position: absolute;
 	background: rgba(0,178,202,.8);
 	padding: 10px;
 	font-weight: 700;
 	bottom:35px;
-	left:35px;
 }
 .slide_home .titulo_slide{
 	display: block;

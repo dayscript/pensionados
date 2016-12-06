@@ -133,6 +133,7 @@
     </header>
 
     <!-- !Navigation -->
+    <div class="bar-title"></div>
     <div class="navicon-menu">
       <a href="#" class="bt-menu"></a>
     </div>
