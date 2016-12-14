@@ -21,6 +21,7 @@
  
 
 
+
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
 
@@ -76,7 +77,9 @@
   ; following as a guide:
 
   ; ie_scripts[lte IE 8][] = scripts/my-script.js
-
+  
+  ;scripts[] = js/script.js
+  scripts[] = scripts/menu-responsive.js
 
 ;----------// Regions
 

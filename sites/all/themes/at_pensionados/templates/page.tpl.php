@@ -133,6 +133,10 @@
     </header>
 
     <!-- !Navigation -->
+    <div class="bar-title"></div>
+    <div class="navicon-menu">
+      <a href="#" class="bt-menu"></a>
+    </div>
     <?php print render($page['menu_bar']); ?>
     <?php if ($primary_navigation): print $primary_navigation; endif; ?>
     <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
